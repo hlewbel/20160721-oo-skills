@@ -45,7 +45,7 @@ def count_words(phrase):
             #phrase = "Porcupine see, porcupine do."
             # print_dict{key_words,count_words}??? 3:45-5:15
     print_dict = {}
-    key_words = phrase.rstrip().split(' ')
+    key_words = phrase.strip().split(' ')
 
     for key in key_words:
 
@@ -59,7 +59,7 @@ def count_words(phrase):
         # else:
         #     print_dict[key] = int(current_value) + 1
 
-    print_dict
+    #print_dict
 
     return print_dict
 
