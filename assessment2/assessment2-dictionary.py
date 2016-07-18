@@ -183,30 +183,30 @@ def translate_to_pirate_talk(phrase):
     # if key is in dictionary, append Pirate value instead to new phrase
     # return translated phrase
 
-phrase = "my student is not a man"
-#phrase = "my student is not a man!"
-pirate_dict = {'sir' : 'matey', 'hotel': 'fleabag inn', 'student' : 'swabbie',
-    'man' : 'matey', 'professor' : 'foul blaggart', 'restaurant' : 'galley',
-    'your' : 'yer', 'excuse' : 'arr', 'students' : 'swabbies', 'are' : 'be',
-    'restroom' : 'head', 'my' : 'me', 'is' : 'be'}
+    phrase = "my student is not a man"
+    #phrase = "my student is not a man!"
+    pirate_dict = {'sir' : 'matey', 'hotel': 'fleabag inn', 'student' : 'swabbie',
+        'man' : 'matey', 'professor' : 'foul blaggart', 'restaurant' : 'galley',
+        'your' : 'yer', 'excuse' : 'arr', 'students' : 'swabbies', 'are' : 'be',
+        'restroom' : 'head', 'my' : 'me', 'is' : 'be'}
 
-user_input = phrase.rstrip().split(' ')
-new_phrase = ""
+    user_input = phrase.rstrip().split(' ')
+    new_phrase = ""
 
-# if key, value not in pirate_dict.get(key,0):
-#     new_phrase.append(key)
-# else:
-#     pirate_word = pirate_dict[key]
-#     new_phrase.append(pirate_word)   
+    # if key, value not in pirate_dict.get(key,0):
+    #     new_phrase.append(key)
+    # else:
+    #     pirate_word = pirate_dict[key]
+    #     new_phrase.append(pirate_word)   
 
-for word in user_input:
-    if word in pirate_dict.iteritems(word):
-        pirate_word = pirate_dict[word]
-        new_phrase.append(pirate_word)
-    else:
-        new_phrase.append(word)
-  
-print new_phrase
+    for word in user_input:
+        if word in pirate_dict.iteritems(word):
+            pirate_word = pirate_dict[word]
+            new_phrase.append(pirate_word)
+        else:
+            new_phrase.append(word)
+      
+    print new_phrase
 
 # if key, value not in pirate_dict.get(key,0):
 #     new_phrase.append(key)
