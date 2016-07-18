@@ -42,16 +42,20 @@ def count_words(phrase):
 
 
     #phrase = "rose is a rose is a rose"
-    #phrase = "Porcupine see, porcupine do."
-    # print_dict{key_words,count_words}??? 3:45-5:15
+        #phrase = "Porcupine see, porcupine do."
+        # print_dict{key_words,count_words}??? 3:45-5:15
     print_dict = {}
     key_words = phrase.rstrip().split(' ')
 
     for key in key_words:
 
-        # try doing this with .get and setting a default value
-        current_value = print_dict.get(key, 1)
-        print_dict[key] = int(current_value)
+        current_value = print_dict.get(key, 0)
+
+        if current_value == 0:
+            current_value += 1
+            print_dict[key] = 1
+        else:
+            print_dict[key] = int(current_value) + 1
 
     print_dict
 
