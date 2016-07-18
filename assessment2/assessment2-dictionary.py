@@ -89,8 +89,7 @@ def get_melon_price(melon_name):
     #melon_name = 'Watermelon'
     melons = {'Watermelon' : 2.95, 'Cantaloupe' : 2.50, 'Musk' : 3.25, 'Christmas' : 14.25}
 
-    if melons.get(melon_name, "No price found"):
-        price = melons[melon_name]
+    price = melons.get(melon_name, "No price found")
 
     #print price
 
