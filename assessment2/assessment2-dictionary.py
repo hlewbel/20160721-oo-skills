@@ -120,25 +120,51 @@ def word_length_sorted(words):
 
     #words = ["ok", "an", "apple", "a", "day"]
     #words = ["test", "this", "amazing", "android", "device", ("wonderful", "pie")]
-    words_tuple = []
-    list_words_dict = []
+ 
+    # *** first version - didn't quite work - too messy *** 
+    # words_tuple = []
+    # list_words_dict = []
+
+    # for word in words:
+    #     new_tuple = [len(word), word]
+    #     words_tuple.append(new_tuple)
+    #     #print new_tuple
+    #     #print words_tuple
+
+    # words_dict = dict(words_tuple)
+    # #print words_dict
+
+    # for key, value in words_dict.iteritems():
+    #     temp = [key,value]
+    #     list_words_dict.append(temp)
+    # #print list_words_dict
+
+     # for word, value in words.get(word,0):
+    #     if len(word) == 1
+    #         print word
+
+    # return list_words_dict    # this currently returns a list not a list of tuples...
+    #                           # this seems like an inefficient way to do this program
+
+
+    ### new version - start with dictionary then convert to list of tuples
+    #words = ["ok", "an", "apple", "a", "day"]
+    words_by_length = {}
+    list_words = []
+    list_tuple = ([])
 
     for word in words:
-        new_tuple = [len(word), word]
-        words_tuple.append(new_tuple)
-        #print new_tuple
-        print words_tuple
 
-    words_dict = dict(words_tuple)
-    #print words_dict
+        # changing up the store order with "[word] +..." works, BUT
+        # should find a way to alphabetize the words so it works in future
+        #words_by_length[len(word)] = words_by_length.get(len(word),[]) + [word]
+        words_by_length[len(word)] = [word] + words_by_length.get(len(word),[])
 
-    for key, value in words_dict.iteritems():
-        temp = [key,value]
-        list_words_dict.append(temp)
-    #print list_words_dict
+    #convert the dictionary into a list of tuples
+    list_tuple = [(x,y) for x,y in words_by_length.iteritems()]
+    #print list_tuple
 
-    return list_words_dict    # this currently returns a list not a list of tuples...
-                              # this seems like an inefficient way to do this program
+    return list_tuple
 
 
 def translate_to_pirate_talk(phrase):
