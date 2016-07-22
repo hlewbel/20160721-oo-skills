@@ -1,0 +1,25 @@
+assessment2-oo-discussion.txt
+
+Questions:
+
+1. What are the three main design advantages that object orientation can provide? 
+Explain each concept.
+- abstraction: you don't have to know everything in order to perform a task
+- encapsulation: small batch of self contained code
+- polymorphism: one batch of code can be used to produce multiple outputs
+
+2. What is a class?
+- A standalone grouping of code that provides a reusable structure comprised
+of attributes (class attributes and instance attributes)
+
+3. What is an instance attribute?
+- An attribute that belongs to the current instance of a class
+
+4. What is a method?
+- a function within a class
+
+5. What is an instance in object orientation?
+- a "copy" of a class that inherits all the class' attributes
+
+6. How is a class attribute different than an instance attribute? Give an example of when you might use each.
+- a class attribute is usable by all instances of that class. An instance attribute is only usable on itself.
